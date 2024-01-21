@@ -12,7 +12,6 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
 //Export function that allows new content to be stored in the database
 export const putDb = async (content) => { 
   console.log('Content added to DB');
@@ -21,10 +20,9 @@ export const putDb = async (content) => {
   const store = trans.objectStore('jate');
   const request = store.put({ id: 1, value: content });
   const result = await request;
-  console.log(result);
+  console.log('Content saved to database', result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
 //Export function that gets all content stored in the database
 export const getDb = async () => { 
   console.log('Content retrieved from DB');
@@ -33,8 +31,8 @@ export const getDb = async () => {
   const store = trans.objectStore('jate');
   const request = store.getAll();
   const result = await request;
-  console.log('result.value', result);
-  return result;
+  console.log('Content read from database', result);
+  return result.value;
 };
 
 initdb();
