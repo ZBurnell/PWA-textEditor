@@ -1,147 +1,73 @@
 # PWA-textEditor
 PWA Text Editor
 
-# 19 Progressive Web Applications (PWA): Text Editor
+# Description
 
-## Your Task
+My goal was to make a simple PWA that allowed a user to save notes or code snippets at home or on the go. Utilizing all of the tools I have gained in the OSU Bootcamp I was able to create, deploy and download the app. It works in the browser and with a click of the `Install` button, it will automatically install to a users desktop. It utilizes chached data from the database to offer quicker load times as well as having the logo on the desktop and webpage load without internet.
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+# Table of Content
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Screenshots](#screenshots)
+4. [Usage](#usage)
+5. [Credits](#credits)
+6. [License](#license)
+7. [Features](#features)
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+# Installation
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+The application is deployed with Heroku and can be found here => [Text Editor Deployment](https://zburnell-text-editor-80616e562f94.herokuapp.com/)
+To see all that went into this project you can find my GitHub Repo here => [GitHub Repo](https://github.com/ZBurnell/PWA-textEditor)
 
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to heroku.
+# Screenshots
 
-## User Story
+Below you will find screenshots from the Devtools console in the browser. It shows my Manifest.json, Service worker and Indexed Database are all functional
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+![Manifest](assets\JATE.Manifest.png)
 
-## Acceptance Criteria
+![Service Worker](assets\JATE.SW.png)
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+![Indexed Database](assets\JATE.IndexedDB.png)
 
-## Mock-Up
+   
+# Usage
 
-The following animation demonstrates the application functionality:
+This is a fully deployed application using [Heroku](https://www.heroku.com). If you would like to test it yourself in VS Code you can follow these instructions. From the command line run `NPM INSTALL` to install all of the dependencies, then `NPM RUN Start` to start the server and build the client and server side servers. Once the servers are running and listening open a new tab in your browser and go to `http://localhost:3000/`. From there you are able to see the text editor and download it to your desktop for offline use.
+   
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+# Credits
+  
+I used the starter code give in the week 19 challenge as well as additional information provided in the OSU-VIRT-FSF-PT-08-2023-U-LOLC repo as a guideline on how to start this project. I also utilized the Xpert Learning Assistant and Stack over flow documents when additional information not provided in class was needed. 
 
-The following image shows the application's `manifest.json` file:
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+# License
 
-The following image shows the application's registered service worker:
+* ![MIT Badge Link](https://img.shields.io/badge/License-MIT-yellow.svg)
+* [MIT License link](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+   
+Copyright (c) 2012-2023 Scott Chacon and others
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-The following image shows the application's IndexedDB storage:
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    
 
-## Grading Requirements
+# Features
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
-
-  * The application works without an internet connection
-
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Heroku at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+This project allows a user the option to install the application to their desktop to be used with or without internet. 
