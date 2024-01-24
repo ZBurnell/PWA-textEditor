@@ -24,11 +24,11 @@ To see all that went into this project you can find my GitHub Repo here => [GitH
 
 Below you will find screenshots from the Devtools console in the browser. It shows my Manifest.json, Service worker and Indexed Database are all functional
 
-![Manifest](assets\JATE.Manifest.png)
+![Manifest](assets/JATE.Manifest.png)
 
-![Service Worker](assets\JATE.SW.png)
+![Service Worker](assets/JATE.SW.png)
 
-![Indexed Database](assets\JATE.IndexedDB.png)
+![Indexed Database](assets/JATE.IndexedDB.png)
 
    
 # Usage
